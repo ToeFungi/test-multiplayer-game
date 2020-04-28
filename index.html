@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="css/index.css">
+<div class="game-window">
+    <canvas id="ctx" width="500" height="500" style="border: 1px solid #000;"></canvas>
+    <div class="text-box">
+        <div id="text-area">
+        </div>
+        <div class="type-area">
+            <input id="message" type="text" placeholder="Message...">
+            <input id="send-button" type="button" value="Send">
+        </div>
+    </div>
+</div>
+<div id="info-panel">
+    <p id="latency"></p>
+    <p id="player-name"></p>
+</div>
+<!--<script src="http://192.168.1.29:3001/socket.io/socket.io.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+<script src="client.js"></script>
+</html>

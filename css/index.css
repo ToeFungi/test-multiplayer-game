@@ -1,0 +1,23 @@
+.game-window {
+    display: flex;
+}
+
+.text-box {
+    padding: 0 10px;
+    margin: 0 3px;
+    border: 1px solid #000;
+}
+
+#text-area {
+    height: 450px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+#info-panel {
+    display: flex;
+}
+
+#info-panel > p {
+    margin-right: 1em;
+}
