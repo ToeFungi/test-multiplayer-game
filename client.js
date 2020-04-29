@@ -1,4 +1,4 @@
-const client = io('http://localhost:3001')
+const client = io('https://test-multiplayer-server.herokuapp.com/:3001')
 
 let isTyping = false
 
