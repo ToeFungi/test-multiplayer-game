@@ -5,6 +5,7 @@ let isTyping = false
 const ctx = document.getElementById('ctx')
   .getContext('2d')
 const latencyHandle = document.getElementById('latency')
+const muteCheckbox = document.getElementById('mute-button')
 
 const handleSendMessage = () => {
   const messageBox = document.getElementById('message')
@@ -19,8 +20,18 @@ const handleSendMessage = () => {
 }
 
 const handleIncomingMessages = ({ message, username }) => {
+  if (!muteCheckbox.checked) {
+    const formatUtterance = `${username} says - ${message}`
+    speak(formatUtterance)
+  }
+
   const messageBox = document.getElementById('text-area')
   messageBox.innerHTML += `<p><strong>${username}:</strong> ${message}</p>`
+}
+
+const speak = sentence => {
+  const utterance = new SpeechSynthesisUtterance(sentence)
+  window.speechSynthesis.speak(utterance)
 }
 
 const updateLoop = data => {
